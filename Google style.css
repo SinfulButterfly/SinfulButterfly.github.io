@@ -5,10 +5,6 @@ html{
 body{
     font-family:Arial;
     }
-/*@font-face {
-  font-family: Futura;
-  src: url('.../FuturaStdRegular.woff') format("WOFF");
-  font-weight:  normal;}*/
 .upper_href{
     margin: auto;
     width: 200px;
@@ -50,12 +46,11 @@ a:link{text-decoration:none; color:rgb(73,73,73)}
 a:visited{text-decoration:none; color:rgb(73,73,73)}
 a:active{text-decoration:underline; color:rgb(200,200,200)}
 a:hover{text-decoration:underline; color:rgb(200,200,200)}
-#heart:hover{text-decoration:none;}
-/* a:hover{text-decoration:none; color:rgb(73,73,73)}*/
-
+#heart:hover{text-decoration:none;
+    }
 #Google{
     position: static;
-    margin-top:100px;
+    margin-top:73px;
     font-weight:555;
     font-size:90px;
     text-align:center;
@@ -67,13 +62,26 @@ a:hover{text-decoration:underline; color:rgb(200,200,200)}
 #google:hover .let{
    transform:rotate(-3240deg);
           }
+
+@keyframes ForL{
+   10% {transform:translate(29px,0px) rotate(-65deg);}
+   42% {transform:translate(173px,-49px) rotate(-180deg);}
+   /**42% {transform:translate(173px,-49px) rotate(180deg);}*/
+   69% {transform:translate(173px,-49px) rotate(-720deg);}
+   100%  {transform:translate(0px,0px) rotate(388deg);}
+    }
+#google:hover #l{
+   animation: ForL 3s ease-in 0s 1;
+          }
 @keyframes ForE{
    1%  {rotate(28deg);}
-   49% {transform:translate(273px,0px) rotate(173deg);}
-   100%  {transform:translate(0px,0px) rotate(388deg);}
-
-}
-#google:hover #e{animation: ForE 1s ease-in 0s infinite ; }
+   15% {transform:translate(px,0px);}
+   42% {transform:translate(273px,0px) rotate(173deg);}
+   60% {transform:translate(149px,-42px) rotate(333deg);}
+   75% {transform:translate(273px,0px) rotate(490deg);}
+   100%  {transform:translate(0px,0px) rotate(770deg);}
+    }
+#google:hover #e{animation: ForE 3s ease-in 0s 1 ;transform:rotate(180deg) translate(0px,-25px) }
 #g{
     color:rgb(60,128,255);
     }
@@ -90,22 +98,8 @@ a:hover{text-decoration:underline; color:rgb(200,200,200)}
     display:inline-block;
     color:rgb(242,60,60);
     transform: rotate(-25deg) translate(-7px, -3px);
-    transition:transform 3s;
-    }
+    transition:transform 3s ease-out;}
 
-/* .tip{
-    visibility: hidden;
-    width: 120px;
-    background-color:rgb(240,240,240);
-    text-align: center;
-    padding: 5px 0;
-    border: 6px;
-    position:relative;
-    }
-#Google:hover .tip{
-    visibility:visible;
-    }
-*/
 #search{
    area-hidden:true;
     margin-top:28px;
@@ -131,7 +125,6 @@ table{
     border-collapse:separate;
     text-align:center;
     }
-
 td{
     border-radius:2px;
     box-shadow:0px 0px 1px 1px rgb(200,200,200),0px -0.1px gray;
